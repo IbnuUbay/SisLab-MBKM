@@ -1,4 +1,4 @@
-@extends('layouts.theme')
+@extends('layout.theme')
 @section('content')
     <div class="container-fluid mt-n22 px-6">
         @if (Session::has('success'))
@@ -15,7 +15,7 @@
                 </button>
             </div>
         @endif
-
+    
         <div>
             <div class="d-flex justify-content-between align-items-center">
                 <div class="mb-2 mb-lg-0">
@@ -54,7 +54,7 @@
                                             {{ $admin->name }}
                                         </td>
                                         <td class="align-middle"><span class="badge bg-warning">
-                                                {{ $admin->position }}</span>
+                                            {{ $admin->position }}</span>
 
                                         </td>
                                         <td class="align-middle">
@@ -66,25 +66,24 @@
                                         <td class="align-middle text-dark">
 
                                             <a class="btn btn-light btn-icon rounded-circle indicator
-      indicator-primary text-muted bg-warning "
+          indicator-primary text-muted bg-warning "
                                                 href="#" role="button" id="edit">
                                                 <i class="icon-xs" data-feather="edit-3" color="grey"></i>
                                             </a>
-
-                                            <form method="post" action="{{ route('petugas.destroy', ['id' => $admin->id]) }}"
-                                                class="d-inline">
+                                            
+                                            <form method="post" action="{{  route('petugas.destroy', ['id'=>$admin->id]) }}" class="d-inline">
                                                 @method('delete')
                                                 @csrf
                                                 <button
                                                     class="btn btn-light btn-icon rounded-circle indicator
-                                        indicator-primary text-muted bg-danger text-white"
+                                            indicator-primary text-muted bg-danger text-white"
                                                     onclick="return confirm('Your data will deleted permanently, are you sure ?')">
                                                     <i class="icon-xs" data-feather="trash" color="white"></i></button>
                                             </form>
 
                                         </td>
 
-
+                                        
                                     </tr>
                                 @endforeach
 

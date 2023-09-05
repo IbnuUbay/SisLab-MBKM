@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TestInputController extends Controller
 {
-    function index(Request $request) {
+    function test_input(Request $request) {
         Item::create([
             'name' => $request->input('name'),
             'type' => $request->input('type'),

@@ -91,7 +91,8 @@ Route::get('/pengembalian', [TransaksiController::class, 'pengembalian_view']);
 Route::get('/forget-password', [AuthController::class, 'forget_password'])->name('forget.password');
 Route::get('/user', [AdminController::class, 'user'])->name('user');
 Route::get('/testing-input-dummy', [TestInputController::class, 'index']);
-Route::get('/testing-input', [TestInputController::class, 'input_peminjaman'])->name('input.get');
+Route::get('/testing-input', [TestInputController::class, 'test_input'])->name('input.get');
+Route::get('/testing-form', [TestInputController::class, 'form']);
 Route::get('/testing-view', [TestInputController::class, 'table']);
 
 

@@ -15,9 +15,4 @@ class Item extends Model
         'condition',
         'quantity'
     ];
-
-    public function lab()
-    {
-        return $this->belongsTo(Lab::class);
-    }
 }
